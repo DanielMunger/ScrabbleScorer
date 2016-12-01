@@ -10,10 +10,9 @@ namespace ScrabbleScoreTest
     [Fact]
     public void Test1_Scorer_number()
     {
-      Scrabble newGame = new Scrabble("cat in a hat");
+      Scrabble newGame = new Scrabble("the zebra, brian, is brown.");
       int result = newGame.Scorer();
-
-      Assert.Equal(true, result == 14);
+      Assert.Equal(true, result == 41);
     }
   }
 }

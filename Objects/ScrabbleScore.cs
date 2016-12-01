@@ -17,32 +17,26 @@ namespace ScrabbleScore.Objects
       {8, new List<char> {'j','x'}},
       {10, new List<char> {'q','z'}}
     };
-
     public Scrabble(string input)
     {
         _userInput = input.ToLower();
         _userScore = 0;
     }
-    
     public int Scorer()
     {
       for(int i = 0; i < _userInput.Length; i++)
       {
-        Console.WriteLine("user input is at: " + _userInput[i]);
         foreach(var pair in _scoreTable)
         {
           for(int j = 0; j < pair.Value.Count; j++)
           {
             if(pair.Value[j] == _userInput[i])
             {
-              Console.WriteLine("adding");
               _userScore += pair.Key;
-              Console.WriteLine(_userScore);
             }
           }
         }
       }
-      Console.WriteLine(_userScore);
       return _userScore;
     }
   }

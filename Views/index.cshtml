@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scrabble Score</title>
+  </head>
+  <body>
+    <h2>Scrabble Scorer Extrodinaire</h2>
+    <form action="/score" method="post">
+      <label for="user-input">Enter a Word to be </label>
+      <input name="user-input" type="text">
+
+      <button type="submit">Score My Word!</button>
+    </form>
+    @if(Model != null)
+    {
+      <p>Here is your score: @Model</p>
+    }
+  </body>
+</html>
